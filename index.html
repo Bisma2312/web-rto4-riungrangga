@@ -62,7 +62,7 @@
                     <li><a href="#tentang-kami" class="hover:text-blue-200 transition duration-300">Tentang Kami</a></li>
                     <li><a href="#kepengurusan" class="hover:text-blue-200 transition duration-300">Kepengurusan</a></li>
                     <li><a href="#program" class="hover:text-blue-200 transition duration-300">Program</a></li>
-                    <li><a href="#form-pengajuan" class="hover:text-blue-200 transition duration-300">Form Pengajuan</a></li>
+                    <li><a href="#form-iuran" class="hover:text-blue-200 transition duration-300">Form Iuran</a></li>
                     <li><a href="#kontak" class="hover:text-blue-200 transition duration-300">Kontak</a></li>
                 </ul>
             </nav>
@@ -192,14 +192,14 @@
     </section>
 
     <!-- Form Submission Section -->
-    <section id="form-pengajuan" class="py-16 px-6 md:px-12 bg-gray-100">
+    <section id="form-iuran" class="py-16 px-6 md:px-12 bg-gray-100">
         <div class="container mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-10 section-title mx-auto">Formulir Pengajuan</h3>
+            <h3 class="text-3xl font-bold text-center mb-10 section-title mx-auto">Formulir Iuran</h3>
             <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
                 <form id="submissionForm" class="space-y-6">
                     <div>
-                        <label for="namaPengaju" class="block text-lg font-medium text-gray-700 mb-2">Nama Pengaju:</label>
-                        <input type="text" id="namaPengaju" name="namaPengaju" required
+                        <label for="nama" class="block text-lg font-medium text-gray-700 mb-2">Nama:</label>
+                        <input type="text" id="nama" name="nama" required
                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg">
                     </div>
                     <div>
@@ -216,13 +216,13 @@
                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg">
                     </div>
                     <div>
-                        <label for="keterangan" class="block text-lg font-medium text-gray-700 mb-2">Keterangan:</label>
-                        <textarea id="keterangan" name="keterangan" rows="4" required
-                                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg"></textarea>
+                        <label for="idTransaksi" class="block text-lg font-medium text-gray-700 mb-2">Id Transaksi (Ref Id):</label>
+                        <input type="text" id="idTransaksi" name="idTransaksi" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg">
                     </div>
                     <button type="submit" id="submitButton"
                             class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 transform hover:scale-105">
-                        <span id="buttonText">Kirim Pengajuan</span>
+                        <span id="buttonText">Kirim Iuran</span>
                         <div id="loadingSpinner" class="spinner hidden"></div>
                     </button>
                     <div id="formMessage" class="mt-4 text-center text-lg font-medium"></div>
@@ -266,7 +266,7 @@
     <!-- Footer Section -->
     <footer class="bg-gray-800 text-white py-8 px-6 md:px-12 text-center">
         <div class="container mx-auto">
-            <p>&copy; 2024 RT 04 RW 05 Desa Jagabaya. Semua Hak Dilindungi.</p>
+            <p>&copy; 2025 RT 04 RW 05 Desa Jagabaya. Semua Hak Dilindungi.</p>
             <p class="mt-2 text-sm">Dibuat dengan semangat kebersamaan.</p>
         </div>
     </footer>
@@ -291,9 +291,12 @@
 
             const formData = new FormData(this);
             const data = {};
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
-            }
+            // Mengubah nama key dari 'namaPengaju' menjadi 'nama' agar sesuai dengan perubahan di HTML
+            data['nama'] = formData.get('nama');
+            data['blok'] = formData.get('blok');
+            data['nominal'] = formData.get('nominal');
+            data['idTransaksi'] = formData.get('idTransaksi'); // Mengubah 'keterangan' menjadi 'idTransaksi'
+
 
             try {
                 const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
@@ -310,17 +313,17 @@
                 // Untuk konfirmasi yang lebih kuat, Anda bisa mengarahkan ke halaman sukses atau
                 // memeriksa respons di sisi Google Sheet.
 
-                formMessage.textContent = 'Pengajuan berhasil dikirim!';
+                formMessage.textContent = 'Iuran berhasil dikirim!';
                 formMessage.className = 'mt-4 text-center text-lg font-medium text-green-600';
                 this.reset(); // Reset formulir setelah sukses
 
             } catch (error) {
                 console.error('Error submitting form:', error);
-                formMessage.textContent = 'Terjadi kesalahan saat mengirim pengajuan. Silakan coba lagi.';
+                formMessage.textContent = 'Terjadi kesalahan saat mengirim iuran. Silakan coba lagi.';
                 formMessage.className = 'mt-4 text-center text-lg font-medium text-red-600';
             } finally {
                 // Sembunyikan spinner dan aktifkan kembali tombol
-                buttonText.textContent = 'Kirim Pengajuan';
+                buttonText.textContent = 'Kirim Iuran';
                 loadingSpinner.classList.add('hidden');
                 submitButton.disabled = false;
             }
