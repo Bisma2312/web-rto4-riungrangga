@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kepengurusan RT 04 RW 05 Desa Jagabaya</title>
+    <title>Website RT 04 RW 05 Jagabaya</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
@@ -11,14 +11,14 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Very light blue-gray background */
-            color: #334155; /* Darker text for professionalism */
+            background-color: #f8fafc; /* Latar belakang abu-abu sangat terang */
+            color: #334155; /* Teks lebih gelap untuk profesionalitas */
         }
         .section-title {
             position: relative;
             display: inline-block;
-            padding-bottom: 12px; /* Increased padding for underline */
-            margin-bottom: 2.5rem; /* Increased margin below title */
+            padding-bottom: 12px;
+            margin-bottom: 2.5rem;
         }
         .section-title::after {
             content: '';
@@ -26,16 +26,16 @@
             left: 50%;
             bottom: 0;
             transform: translateX(-50%);
-            width: 80px; /* Wider underline */
-            height: 4px; /* Thicker underline */
-            background-color: #2563eb; /* Deeper blue for emphasis */
+            width: 80px;
+            height: 4px;
+            background-color: #2563eb; /* Biru yang lebih gelap */
             border-radius: 2px;
         }
-        /* Smooth scroll for navigation */
+        /* Menggunakan smooth scroll untuk navigasi */
         html {
             scroll-behavior: smooth;
         }
-        /* Custom spinner for loading state */
+        /* Custom spinner untuk status loading */
         .spinner {
             border: 4px solid rgba(255, 255, 255, 0.3);
             border-left-color: #ffffff;
@@ -51,22 +51,22 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        /* Custom styling for cards */
+        /* Styling kustom untuk kartu */
         .card {
             background-color: #ffffff;
-            border-radius: 0.75rem; /* More rounded corners */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Stronger shadow */
+            border-radius: 0.75rem; /* Sudut lebih melengkung */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         .card:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
+            transform: translateY(-5px); /* Efek terangkat saat di-hover */
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
 <body class="text-gray-700">
 
-    <!-- Header Section -->
+    <!-- Bagian Header -->
     <header class="bg-blue-800 text-white shadow-xl py-5 px-6 md:px-16 sticky top-0 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <h1 class="text-3xl md:text-4xl font-extrabold mb-3 md:mb-0 tracking-wide">RT 04 RW 05 Jagabaya</h1>
@@ -83,7 +83,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Bagian Beranda (Hero) -->
     <section id="beranda" class="bg-gradient-to-br from-blue-700 to-indigo-900 text-white py-24 px-6 md:px-16 text-center shadow-inner">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg">Selamat Datang di Website Resmi</h2>
@@ -92,7 +92,7 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- Bagian Tentang Kami -->
     <section id="tentang-kami" class="py-20 px-6 md:px-16 bg-white">
         <div class="container mx-auto max-w-6xl">
             <h3 class="text-4xl font-extrabold text-center mb-12 section-title mx-auto">Tentang Kami</h3>
@@ -106,54 +106,54 @@
                     </p>
                 </div>
                 <div class="flex justify-center">
-                    <!-- Placeholder image for community -->
+                    <!-- Placeholder gambar komunitas -->
                     <img src="https://placehold.co/600x400/2563eb/ffffff?text=Komunitas+Warga" alt="Image of Community" class="rounded-xl shadow-2xl w-full max-w-lg object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Management Structure Section -->
+    <!-- Bagian Struktur Kepengurusan -->
     <section id="kepengurusan" class="py-20 px-6 md:px-16 bg-gray-50">
         <div class="container mx-auto max-w-6xl">
             <h3 class="text-4xl font-extrabold text-center mb-12 section-title mx-auto">Struktur Kepengurusan</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Ketua RT -->
+                <!-- Kartu Ketua RT -->
                 <div class="card p-8 text-center flex flex-col items-center">
                     <img src="https://placehold.co/120x120/8b5cf6/ffffff?text=Ketua+RT" alt="Foto Ketua RT" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover border-4 border-purple-400 shadow-md">
                     <h4 class="text-2xl font-bold mb-1 text-blue-800">Bapak Rudi Hartono</h4>
                     <p class="text-lg text-blue-600 font-semibold">Ketua RT 04</p>
                     <p class="text-base text-gray-600 mt-3 leading-relaxed">Bertanggung jawab penuh atas kepemimpinan dan koordinasi seluruh kegiatan RT, serta menjadi perwakilan utama warga.</p>
                 </div>
-                <!-- Sekretaris -->
+                <!-- Kartu Sekretaris -->
                 <div class="card p-8 text-center flex flex-col items-center">
                     <img src="https://placehold.co/120x120/3b82f6/ffffff?text=Sekretaris" alt="Foto Sekretaris" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover border-4 border-blue-400 shadow-md">
                     <h4 class="text-2xl font-bold mb-1 text-blue-800">Ibu Siti Aminah</h4>
                     <p class="text-lg text-blue-600 font-semibold">Sekretaris</p>
                     <p class="text-base text-gray-600 mt-3 leading-relaxed">Mengelola administrasi, dokumentasi, dan surat-menyurat RT, serta membantu ketua dalam tugas-tugas operasional.</p>
                 </div>
-                <!-- Bendahara -->
+                <!-- Kartu Bendahara -->
                 <div class="card p-8 text-center flex flex-col items-center">
                     <img src="https://placehold.co/120x120/facc15/ffffff?text=Bendahara" alt="Foto Bendahara" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover border-4 border-yellow-400 shadow-md">
                     <h4 class="text-2xl font-bold mb-1 text-blue-800">Bapak Joko Susilo</h4>
                     <p class="text-lg text-blue-600 font-semibold">Bendahara</p>
                     <p class="text-base text-gray-600 mt-3 leading-relaxed">Bertanggung jawab atas pengelolaan keuangan, pencatatan iuran, dan laporan keuangan RT secara transparan.</p>
                 </div>
-                <!-- Seksi Keamanan -->
+                <!-- Kartu Seksi Keamanan -->
                 <div class="card p-8 text-center flex flex-col items-center">
                     <img src="https://placehold.co/120x120/ef4444/ffffff?text=Keamanan" alt="Foto Seksi Keamanan" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover border-4 border-red-400 shadow-md">
                     <h4 class="text-2xl font-bold mb-1 text-blue-800">Bapak Budi Santoso</h4>
                     <p class="text-lg text-blue-600 font-semibold">Seksi Keamanan</p>
                     <p class="text-base text-gray-600 mt-3 leading-relaxed">Menjaga ketertiban dan keamanan lingkungan, serta mengkoordinasikan kegiatan ronda malam.</p>
                 </div>
-                <!-- Seksi Kebersihan -->
+                <!-- Kartu Seksi Kebersihan -->
                 <div class="card p-8 text-center flex flex-col items-center">
                     <img src="https://placehold.co/120x120/22c55e/ffffff?text=Kebersihan" alt="Foto Seksi Kebersihan" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover border-4 border-green-400 shadow-md">
                     <h4 class="text-2xl font-bold mb-1 text-blue-800">Ibu Nurhayati</h4>
                     <p class="text-lg text-blue-600 font-semibold">Seksi Kebersihan</p>
                     <p class="text-base text-gray-600 mt-3 leading-relaxed">Mengkoordinasikan kegiatan kebersihan lingkungan dan pengelolaan sampah warga.</p>
                 </div>
-                <!-- Seksi Sosial -->
+                <!-- Kartu Seksi Sosial -->
                 <div class="card p-8 text-center flex flex-col items-center">
                     <img src="https://placehold.co/120x120/3b82f6/ffffff?text=Sosial" alt="Foto Seksi Sosial" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover border-4 border-blue-400 shadow-md">
                     <h4 class="text-2xl font-bold mb-1 text-blue-800">Bapak Agus Setiawan</h4>
@@ -164,7 +164,7 @@
         </div>
     </section>
 
-    <!-- Work Programs Section -->
+    <!-- Bagian Program Kerja -->
     <section id="program" class="py-20 px-6 md:px-16 bg-white">
         <div class="container mx-auto max-w-6xl">
             <h3 class="text-4xl font-extrabold text-center mb-12 section-title mx-auto">Program Kerja Unggulan</h3>
@@ -205,7 +205,7 @@
         </div>
     </section>
 
-    <!-- Form Iuran Section -->
+    <!-- Bagian Formulir Iuran -->
     <section id="form-iuran" class="py-20 px-6 md:px-16 bg-blue-50">
         <div class="container mx-auto max-w-3xl">
             <h3 class="text-4xl font-extrabold text-center mb-12 section-title mx-auto">Formulir Pembayaran Iuran Warga</h3>
@@ -248,101 +248,100 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Bagian Kontak -->
     <section id="kontak" class="py-20 px-6 md:px-16 bg-white">
         <div class="container mx-auto max-w-6xl">
             <h3 class="text-4xl font-extrabold text-center mb-12 section-title mx-auto">Kontak Kami</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="card p-8">
-                    <p class="text-lg mb-4"><strong class="text-blue-700">Alamat Sekretariat:</strong> Jl. Melati No. 123, RT 04 RW 05, Desa Jagabaya, Kecamatan Cimaung, Kabupaten Bandung, Jawa Barat</p>
-                    <p class="text-lg mb-4"><strong class="text-blue-700">Email Resmi:</strong> rt04rw05.jagabaya@email.com</p>
-                    <p class="text-lg mb-4"><strong class="text-blue-700">Telepon Ketua RT:</strong> 0812-3456-7890</p>
-                    <p class="text-lg"><strong class="text-blue-700">Telepon Sekretaris:</strong> 0857-1234-5678</p>
-                    <div class="mt-8 flex space-x-6">
-                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300 transform hover:scale-110">
-                            <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300 transform hover:scale-110">
-                            <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M.057 2.404C2.083.712 4.108 0 6.133 0c1.763 0 3.526.352 5.289 1.056 1.763.704 3.526 1.763 5.289 3.178 1.763 1.415 3.178 3.178 4.241 5.289 1.063 2.11 1.595 4.473 1.595 7.089 0 2.616-.532 4.979-1.595 7.089-1.063 2.11-2.478 3.874-4.241 5.289-1.763 1.415-3.526 2.474-5.289 3.178C9.66 23.648 7.9 24 6.133 24c-2.025 0-4.05-.712-6.076-2.137L.057 2.404zM12 17.5c-2.761 0-5-2.239-5-5s2.239-5 5-5 5 2.239 5 5-2.239 5-5 5z"/>
-                            </svg>
-                        </a>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="card p-8 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.746 4.474a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.474.746a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.94 18 2 12.06 2 5V3z" />
+                    </svg>
+                    <h4 class="text-xl font-bold mb-2">Telepon</h4>
+                    <p class="text-lg text-gray-700">+62 812-345-6789</p>
                 </div>
-                <div class="flex justify-center">
-                    <!-- Placeholder for map or contact image -->
-                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Peta+Lokasi" alt="Image of Map Location" class="rounded-xl shadow-2xl w-full max-w-lg object-cover">
+                <div class="card p-8 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    <h4 class="text-xl font-bold mb-2">Email</h4>
+                    <p class="text-lg text-gray-700">rt04rw05.jagabaya@gmail.com</p>
+                </div>
+                <div class="card p-8 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                    </svg>
+                    <h4 class="text-xl font-bold mb-2">Alamat</h4>
+                    <p class="text-lg text-gray-700">Jl. Jagabaya No. RT 04 RW 05, Desa Jagabaya, Kecamatan Cimaung, Kabupaten Bandung</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-10 px-6 md:px-16 text-center">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-6 md:px-16 text-center">
         <div class="container mx-auto">
-            <p class="text-lg">&copy; 2025 RT 04 RW 05 Desa Jagabaya. Semua Hak Dilindungi.</p>
-            <p class="mt-3 text-base opacity-80">Dibuat dengan semangat kebersamaan dan pelayanan.</p>
+            <p>&copy; 2025 Kepengurusan RT 04 RW 05. Semua Hak Dilindungi.</p>
+            <p class="mt-2 text-sm text-gray-400">Didesain dengan ❤️ oleh Warga</p>
         </div>
     </footer>
 
+    <!-- JavaScript for form submission -->
     <script>
-        // Ganti URL_APPS_SCRIPT_ANDA dengan URL Aplikasi Web yang Anda dapatkan dari Langkah 1
-        const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyzq19S3u3nOzimYfQybJ6iGxT6xaEGZRYuNuEydzRJTtGDQwR3nm7QZQeBqRO2r_3JZg/exec"; // <--- PENTING: GANTI INI!
-
         document.getElementById('submissionForm').addEventListener('submit', async function(event) {
-            event.preventDefault(); // Mencegah pengiriman formulir default
+            event.preventDefault(); // Mencegah form submit secara default
 
+            const form = event.target;
             const submitButton = document.getElementById('submitButton');
             const buttonText = document.getElementById('buttonText');
             const loadingSpinner = document.getElementById('loadingSpinner');
             const formMessage = document.getElementById('formMessage');
 
-            // Tampilkan spinner dan nonaktifkan tombol
-            buttonText.textContent = 'Mengirim...';
-            loadingSpinner.classList.remove('hidden');
+            // URL Google Apps Script Anda (WAJIB DIGANTI!)
+            const GOOGLE_APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; 
+
+            // Tampilkan loading spinner dan nonaktifkan tombol
             submitButton.disabled = true;
-            formMessage.textContent = ''; // Hapus pesan sebelumnya
-            formMessage.className = 'mt-6 text-center text-lg font-medium'; // Reset class
+            buttonText.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+            formMessage.textContent = '';
+            formMessage.classList.remove('text-green-600', 'text-red-600');
 
-            const formData = new FormData(this);
-            const data = {};
-            // Mengubah nama key dari 'namaPengaju' menjadi 'nama' agar sesuai dengan perubahan di HTML
-            data['nama'] = formData.get('nama');
-            data['blok'] = formData.get('blok');
-            data['nominal'] = formData.get('nominal');
-            data['idTransaksi'] = formData.get('idTransaksi'); // Mengubah 'keterangan' menjadi 'idTransaksi'
-
+            // Ambil data dari form
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
 
             try {
                 const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
                     method: 'POST',
-                    mode: 'no-cors', // Penting untuk menghindari masalah CORS dengan Google Apps Script
+                    body: JSON.stringify(data),
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Content-Type': 'application/json',
                     },
-                    body: new URLSearchParams(data).toString(),
                 });
 
-                // Karena mode 'no-cors', kita tidak bisa membaca response.json() secara langsung.
-                // Kita asumsikan sukses jika tidak ada error jaringan.
-                // Untuk konfirmasi yang lebih kuat, Anda bisa mengarahkan ke halaman sukses atau
-                // memeriksa respons di sisi Google Sheet.
-
-                formMessage.textContent = '✅ Iuran berhasil dikirim! Terima kasih atas partisipasi Anda.';
-                formMessage.className = 'mt-6 text-center text-lg font-medium text-green-700 bg-green-50 p-4 rounded-lg';
-                this.reset(); // Reset formulir setelah sukses
-
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.success) {
+                        formMessage.textContent = '✅ Data berhasil dikirim! Terima kasih.';
+                        formMessage.classList.add('text-green-600');
+                        form.reset(); // Reset form setelah sukses
+                    } else {
+                        throw new Error(result.message || 'Gagal mengirim data.');
+                    }
+                } else {
+                    throw new Error(`Server error: ${response.status} ${response.statusText}`);
+                }
             } catch (error) {
                 console.error('Error submitting form:', error);
-                formMessage.textContent = '❌ Terjadi kesalahan saat mengirim iuran. Silakan coba lagi.';
-                formMessage.className = 'mt-6 text-center text-lg font-medium text-red-700 bg-red-50 p-4 rounded-lg';
+                formMessage.textContent = `❌ Terjadi kesalahan: ${error.message}`;
+                formMessage.classList.add('text-red-600');
             } finally {
                 // Sembunyikan spinner dan aktifkan kembali tombol
-                buttonText.textContent = 'Kirim Pembayaran Iuran';
-                loadingSpinner.classList.add('hidden');
                 submitButton.disabled = false;
+                buttonText.classList.remove('hidden');
+                loadingSpinner.classList.add('hidden');
             }
         });
     </script>
